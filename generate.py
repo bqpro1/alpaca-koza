@@ -26,12 +26,9 @@ except:
 
 def main(
     load_8bit: bool = False,
-    base_model: str = "",
+    base_model: str = "decapoda-research/llama-7b-hf",
     lora_weights: str = "Lbuk/alpaca-koza-7b"
 ):
-    assert base_model, (
-        "Please specify a --base_model, e.g. --base_model='decapoda-research/llama-7b-hf'"
-    )
 
     tokenizer = LlamaTokenizer.from_pretrained(base_model)
     if device == "cuda":

@@ -1,8 +1,7 @@
 ## 🐐🌲KOZA: Low-Rank LLaMA Instruct-Tuning
 
-- 🤗 **Try the pretrained model out [here](https://huggingface.co/spaces/tloen/alpaca-lora), courtesy of a GPU grant from Huggingface!**
 
-KOZA is an instruct model for Polish language with similar capabilities for LLMs like ChatGPT, but it can be run on a single machine 💻 with a strong GPU (RTX 4080/4090).
+KOZA 🐐 is an instruct model for Polish language with similar capabilities for LLMs like ChatGPT, but it can be run on a single machine 💻 with a strong GPU (RTX 4080/4090).
 This repo was originally forked from [**alpaca-lora**](https://github.com/tloen/alpaca-lora).
 
 Using this repo, you can reproduce the [**Stanford Alpaca**](https://github.com/tatsu-lab/stanford_alpaca) for the Polish language. Original paper from Stanford: [**low-rank adaptation (LoRA)**](https://arxiv.org/pdf/2106.09685.pdf).

@@ -16,6 +16,7 @@ if torch.cuda.is_available():
 else:
     device = "cpu"
 
+
 try:
     if torch.backends.mps.is_available():
         device = "mps"
@@ -26,7 +27,7 @@ except:
 def main(
     load_8bit: bool = False,
     base_model: str = "",
-    lora_weights: str = "tloen/alpaca-lora-7b",
+    lora_weights: str = "Lbuk/alpaca-koza-7b"
 ):
     assert base_model, (
         "Please specify a --base_model, e.g. --base_model='decapoda-research/llama-7b-hf'"
@@ -115,7 +116,7 @@ def main(
         fn=evaluate,
         inputs=[
             gr.components.Textbox(
-                lines=2, label="Instruction", placeholder="Tell me about alpacas."
+                lines=2, label="Instruction", placeholder="Opowiedz mi o psach i kotach."
             ),
             gr.components.Textbox(lines=2, label="Input", placeholder="none"),
             gr.components.Slider(minimum=0, maximum=1, value=0.1, label="Temperature"),
@@ -134,8 +135,8 @@ def main(
                 label="Output",
             )
         ],
-        title="🦙🌲 Alpaca-LoRA",
-        description="Alpaca-LoRA is a 7B-parameter LLaMA model finetuned to follow instructions. It is trained on the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) dataset and makes use of the Huggingface LLaMA implementation. For more information, please visit [the project's website](https://github.com/tloen/alpaca-lora).",
+        title="🐐🌲 Alpaca-KOZA 🌲🐐",
+        description="Alpaca-KOZA is a 7B-parameter LLaMA model finetuned to follow instructions. It is trained on the [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca) dataset and makes use of the Huggingface LLaMA implementation. For more information, please visit [the project's website](https://github.com/tloen/alpaca-lora).",
     ).launch()
     # Old testing code follows.
 

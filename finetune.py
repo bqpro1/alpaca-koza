@@ -24,8 +24,8 @@ from peft import (
 def train(
     # model/data params
     base_model: str = "",  # the only required argument
-    data_path: str = "/home/leszek/ALPACA/data/alpaca_data_pl_verified.json",
-    output_dir: str = "/home/leszek/ALPACA/models/KOZA/koza_1",
+    data_path: str = "data/alpaca_data_pl_verified.json",
+    output_dir: str = "models/KOZA-7B",
     # training hyperparams
     batch_size: int = 128,
     micro_batch_size: int = 4,

@@ -7,13 +7,13 @@ This repo was originally forked from [**alpaca-lora**](https://github.com/tloen/
 
 Using this repo, you can reproduce the [**Stanford Alpaca**](https://github.com/tatsu-lab/stanford_alpaca) for the Polish language. Original paper from Stanford: [**low-rank adaptation (LoRA)**](https://arxiv.org/pdf/2106.09685.pdf).
 
-### 1. Quck start
+### 1. Quick start
 
 In your terminal clone repo:
 ```bash
 git clone git@github.com:bqpro1/alpaca-koza.git
 ``` 
-From repo folder install requirements.txt:
+From repo folder install `requirements.txt`:
 ```bash
 pip isntall -r requirements.txt
 ``` 
@@ -30,5 +30,8 @@ I used `translation_instructions.ipynb` for auto-translation instructions from `
 
 ### 3. Training
 
-Just run `finetune.py`. 
+Just run 
+```bash
+python finetune.py --base_model='decapoda-research/llama-7b-hf'
+``` 
 Weights for Polsih language are also on [huggingface🤗](https://huggingface.co/Lbuk/alpaca-koza-7b).
